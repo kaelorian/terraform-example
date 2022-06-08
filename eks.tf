@@ -2,7 +2,7 @@ module "eks" {
   source                          = "terraform-aws-modules/eks/aws"
   cluster_name                    = var.cluster_name
   cluster_version                 = "1.20"
-  version = "18.22.0"
+  version = "15.0.0"
   subnets                         = setunion(module.vpc.private_subnets, module.vpc.public_subnets)
   cluster_create_timeout          = "1h"
   cluster_endpoint_private_access = true
